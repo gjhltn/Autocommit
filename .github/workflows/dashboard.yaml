@@ -12,7 +12,7 @@
           - name: Download File
             run: |
               curl https://dummyjson.com/todos --output ./file.json
-              working-directory: ${{ github.workspace }}
+            working-directory: ${{ github.workspace }}
           - name: Commit and Push Changes
             run: |
                 git config --global user.name "${{ github.actor }}"

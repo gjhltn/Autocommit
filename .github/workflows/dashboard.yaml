@@ -11,7 +11,7 @@
             run: echo "NOW=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
           - name: Download File
             run: |
-              curl https://dummyjson.com/todos --output ./file.json
+              curl https://dummyjson.com/todos --output ./{{$NOW}}.json
             working-directory: ${{ github.workspace }}
           - name: Commit and Push Changes
             run: |
